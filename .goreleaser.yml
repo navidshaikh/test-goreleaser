@@ -15,7 +15,7 @@ builds:
   - arm
   - arm64
   ldflags:
-    - {{ .Env.LD_FLAGS }}
+    - "{{ .Env.LD_FLAGS }}"
 archives:
 - name_template: "{{ .Binary }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
   replacements:
