@@ -14,9 +14,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-source $(dirname $0)/build-flags.sh
+source /home/nshaikh/work/src/test-goreleaser/hack/build-flags.sh
 export TAG=$1
 export LD_FLAGS="$(build_flags $(dirname $0)/..)"
 export GITHUB_TOKEN=$2
 
+echo ${TAG}
+echo ${LD_FLAGS}
+echo ${GITHUB_TOKEN}
 goreleaser
